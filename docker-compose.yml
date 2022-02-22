@@ -1,13 +1,17 @@
 version: "3"
 services:
-  gatsby:
+  web:
     build:
       context: .
-      dockerfile: Dockerfile
-    working_dir: /app
-    command: ./entrypoint.sh
+      dockerfile: Dockerfile.dev
     ports:
       - "8000:8000"
+      - "9929:9929"
+      - "9230:9230"
     volumes:
+      - /app/node_modules
       - .:/app
-      - /app/node_modules/
+    environment:
+      - NODE_ENV=development
+      # - GATSBY_WEBPACK_PUBLICPATH=/ gatsby develop -H 0.0.0.0 -p 8080
+      # - CHOKIDAR_USEPOLLING=true
