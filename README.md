@@ -1,9 +1,13 @@
 # gatsby-docker
 
-experimental build to test gatsby with docker
+A fresh Gatsby site with Docker for local development.
 
-https://medium.com/ultralight-io/getting-gatsby-to-run-on-docker-compose-6bf3b0d97efb
+Hot Module Reloading working for docker containers running on both MacOS and Windows.
 
-## References
+For more info: <a href="https://walterteng.com/garden/gatsby-docker" target="_blank">My Docker Setup for Gatsby</a>
 
-https://stackoverflow.com/questions/52961824/run-gatsby-with-docker-compose
+## Run the Docker Container
+
+```
+docker compose up -d
+```
